@@ -1,0 +1,33 @@
+@media (max-width: 998px){
+    header.header{
+        padding: 2rem 0px .5rem 0;
+    }
+    .header-stroke{
+        bottom: 0;
+    }
+    .header-lang{
+        position: fixed;
+        bottom: 60px;
+        right: 30px;
+        margin: 0px 0px 0px 0px;
+        transform: rotate(90deg);
+    }
+    .lang-value a{
+        font-size: 1.5rem;
+    }
+    .lang-item:first-child:after{
+        height: 1.5rem;
+    }
+    .header-right,
+    .menu-column:first-child:after,
+    .menu-column:nth-child(2):after{
+        display: none;
+    }
+    .header-left,
+    .header-menu{
+        width: 100%;
+    }
+    ul.menu-list{
+        justify-content: space-between;
+    }
+}
