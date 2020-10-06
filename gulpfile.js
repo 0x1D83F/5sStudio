@@ -9,14 +9,16 @@ let path = {
         css: projectFolder + '/css/',
         js: projectFolder + '/js/',
         img: projectFolder + '/img/',
-        fonts: projectFolder + '/fonts/'
+        fonts: projectFolder + '/fonts/',
+        video: projectFolder + '/video/'
     },
     source: {
         html: [sourceFolder + '/*.html', '!' + sourceFolder + '/_*.html'],
         css: sourceFolder + '/scss/style.scss',
         js: sourceFolder + '/js/script.js',
         img: sourceFolder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-        fonts: sourceFolder + '/fonts/*.ttf'
+        fonts: sourceFolder + '/fonts/*.ttf',
+        video: sourceFolder + '/video/**/*'
     },
     watch: {
         html: sourceFolder + '/**/*.html',
@@ -99,6 +101,12 @@ function js(arg) {
         .pipe(browserSync.stream())
 }
 
+function video(arg) {
+    return src(path.source.video)
+        .pipe(dest(path.build.video))
+        .pipe(browserSync.stream())
+}
+
 function images(arg) {
     return src(path.source.img)
         .pipe(dest(path.build.img))
@@ -172,9 +180,10 @@ function watchFiles(params) {
     gulp.watch([path.watch.img], images)
 }
 
-let build = gulp.series(deleteFolderDist, gulp.parallel(js, css, html, images, livefonts), fontsStyle)
+let build = gulp.series(deleteFolderDist, gulp.parallel(js, css, html, images, livefonts,video), fontsStyle)
 let watch = gulp.parallel(build, watchFiles, synchro);
 
+exports.video = video;
 exports.fontsStyle = fontsStyle;
 exports.livefonts = livefonts;
 exports.images = images;
