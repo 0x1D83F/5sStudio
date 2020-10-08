@@ -119,6 +119,7 @@ li.menu-column:last-child{
 .lang-item-fr:before{
     left: -10px;
 }
+
 .lang-value,
 .menu-item{
     margin-bottom: 5px;
@@ -134,6 +135,15 @@ li.menu-column:last-child{
     position: fixed;
     left: 30px;
     bottom: 15px;
+}
+.lang-translate-active{
+    bottom: 100px !important; // Выбранный язык france
+}
+.lang-active{
+    transform: translateX(0%);// Выбранный язык, если у фран содержится этот клас то делаеться мардж боттом
+}
+.lang-active-icon svg path{ // Выбранный язык
+    stroke-dashoffset: 0px;
 }
 
 

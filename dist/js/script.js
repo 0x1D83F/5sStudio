@@ -20,6 +20,12 @@ const link = document.querySelector('.lang-value-items');
 const franceBlock = document.querySelector('.lang-item-fr');
 const englishHiddenElem = document.querySelector('.lang-text-full-eng');
 const englishShort = document.querySelector('.lang-text-abbr');
+const headerLangElem = document.querySelector('.header-lang');
+const franceEndElem = document.querySelector('.lang-text-full-fr ');
+const userWindow = window.innerWidth || document.documentElement.offsetWidth;
+
+if(userWindow <= 1000 && franceEndElem.classList.contains('lang-active')) headerLangElem.classList.add('lang-translate-active')
+else headerLangElem.classList.remove('lang-translate-active')
 
 
 
@@ -34,6 +40,7 @@ link.addEventListener('mouseout', () => {
     englishHiddenElem.classList.remove('eng-visible')
     englishShort.classList.remove('eng-no-margin')
 })
+
 
 ;
 const divWave = () => {
@@ -86,6 +93,37 @@ const divWave = () => {
 divWave();
 
 
+;
+window.addEventListener('load', () => {
+    const first = document.querySelectorAll('.seven-item');
+    const wrapper = document.querySelector('.seven-wrap');
+    const video_svg = document.querySelector('.m-link-svg svg path');
+    const mainVideo = document.querySelector('.main-video');
+
+    first.forEach(i => i.classList.add('trans-off'))
+
+    function delay(value, ms) {
+        return new Promise(resolve => resolve(
+            setTimeout(() => {
+                wrapper.style.cssText = `
+                    transform: translateY(${value}px);
+                `
+            }, ms))
+        )
+    }
+
+    delay(80, 1000)
+    delay(40, 1900)
+    delay(0, 2900)
+
+    setTimeout(() => {
+        video_svg.style.cssText = `
+            stroke-dashoffset: 0px;
+        `
+        mainVideo.classList.add('m-video-anim-off')
+    }, 3000);
+
+});
 ;
 
 

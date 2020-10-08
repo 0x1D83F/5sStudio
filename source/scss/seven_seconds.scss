@@ -7,7 +7,14 @@
     z-index: 1;
 
 }
-.seven-item p {
+.seven-wrap{
+    transform: translateY(120px);
+    transition: .3s;
+}
+.seven-item{
+    transition: transform .9s cubic-bezier(.075,.82,.165,1);
+}
+.seven-pgh{
     text-transform: uppercase;
     font-size: 6.25rem;
     white-space: nowrap;
@@ -15,3 +22,22 @@
     @include perp;
     line-height: 1.1;
 }
+
+.seven-item-f,
+.seven-item-s,
+.seven-item-t{
+    transform: scale3d(1,0,0);
+}
+.seven-item-f{
+    transition-delay: .5s;
+}
+.seven-item-s{
+    transition-delay: 1.5s;
+}
+.seven-item-t{
+    transition-delay: 2.5s;
+}
+.trans-off{
+    transform: scale3d(1,1,1);
+}
+

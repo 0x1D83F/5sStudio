@@ -8,12 +8,13 @@
     .header-lang{
         position: fixed;
         z-index: 3;
-        bottom: 30px;
-        right: 0px;
+        bottom: 50px;
+        right: -40px;
         margin: 0px 0px 0px 0px;
         transform: rotate(90deg);
 
     }
+
     .lang-value a{
         font-size: 1.5rem;
     }
@@ -39,16 +40,10 @@
         width:50vw;
         height: 25vw;
     }
-    .lang-text-full{
-        display: none;
-    }
     .lang-item-fr,
     .lang-text-abbr,
     .lang-text-bg{
         background-color: transparent;
-    }
-    .lang-text-eng{
-        margin-right: 20px;
     }
 }
 

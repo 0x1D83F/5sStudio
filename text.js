@@ -1,38 +1,46 @@
-setTimeout(() => {
-    item.style.transform = `translateY(-100%)`
+async function delay() {
+    await setTimeout(() => {
+        wrapper.style.cssText = `
+            transform: translateY(80px);
+         `
+    }, 1000);
+    await setTimeout(() => {
+        wrapper.style.cssText = `
+            transform: translateY(40px);
+         `
+    }, 1900);
     setTimeout(() => {
-        item.style.transform = `translateY(0%)`
-    }, 100);
-}, index * 25);
-
-
-function startAnimationText() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            item.style.transform = `translateY(-100%)`
-            resolve()
-        }, index * 35);
-    })
-        .then(() => {
-            setTimeout(() => {
-                item.style.transform = `translateY(0%)`
-            }, 100);
-        })
+        wrapper.style.cssText = `
+            transform: translateY(0px);
+         `
+    }, 2900);
 }
-startAnimationText();
+delay()
 
 
 
 
-async function startAnimationText() {
-    return await new Promise(resolve => {
-        setTimeout(() => {
-            item.style.transform = `translateY(-100%)`
-            resolve()
-        }, index * 35);
-    })
-    setTimeout(() => {
-        item.style.transform = `translateY(0%)`
-    }, 100);
+
+
+
+
+
+
+
+
+
+
+
+
+
+function delay(value,ms) {
+    return new Promise(resolve => resolve(setTimeout(() => {
+        wrapper.style.cssText = `
+            transform: translateY(${value}px);
+         `
+    }, ms)))
 }
-startAnimationText();
+
+delay(80, 1000)
+delay(40, 1900)
+delay(0, 2900)

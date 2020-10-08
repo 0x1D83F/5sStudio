@@ -1,6 +1,6 @@
 .main-interactive{
     position: absolute;
-    bottom: 8.5%;
+    bottom: 10%;
     left: 50%;
 }
 .int-wrapper{
@@ -8,52 +8,77 @@
 }
 .main-video{
     width: calc(350 * 100vw / 1366);
+    transform: perspective(1000px) rotateX(-90deg);
+    transform-origin: top center;
+    transition: transform .9s;
+}
+.m-video-anim-off{
+    transform: perspective(1000px) rotateX(0deg);
 }
 .main-video video{
     width: 100%;
     height: 100%;
 }
 
-.main-button {
+.main-button{
     position: absolute;
-    left: 0;
-    transform: translateX(-50%);
-    top: 50%;
 }
-
-a.main-video-text {
+.m-btn-container{
+    position: relative;
 }
-.wrapp-video-column{
-    width: 13.75rem;
-    height: 13.75rem;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background-color: transparent;
+a.m-btn-link {}
+.m-link-container {}
+.m-link-thesis {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
+    transform: translateY(100%);
+    position: relative;
+    z-index: 2;
 }
 
-.video-text-item {
-    color: #fff;
-    text-transform: uppercase;
-    transform: translateY(200%);
-}
-.video-text-item:first-child {
+.thesis-item:first-child{
     margin-right: 5px;
-    transition: .2s;
 }
-.video-text-item:nth-child(2){
-    transition: .2s;
+.thesis-item {
+    color: #fff;
+    font-size: 1.1875rem;
+    text-transform: uppercase;
+    transform: translateX(-100%) translateY(-50%);
+    transition: transform .1s;
+}
+.thesis-item:nth-child(2) {
     transition-delay: .1s;
 }
-.main-button:hover .wrapp-video-column{
-    background-color: #00a19a;
+.m-btn-link:hover .thesis-item{
+    transform: translateX(-100%) translateY(-180%);
 }
-.main-button:hover .video-text-item:first-child,
-.main-button:hover .video-text-item:nth-child(2){
-    transform: translateY(50%);
+.m-link-svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%,40%);
 }
+.m-link-svg svg{
+    width: 13.75rem;
+    height: 13.75rem;
+}
+.m-link-svg svg path{
+    fill: none;
+    stroke-width:6;
+    stroke: #fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-dasharray: 3572px;
+    stroke-dashoffset: 3572px;
+    transition: fill .5s;
+    transition: stroke-dashoffset 1s;
+}
+.m-btn-link:hover  .m-link-svg svg path{
+    fill: #00a19a;
+}
+svg.svg-circle-header {}
+path.st0 {}
+
+
+
 
 
