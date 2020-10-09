@@ -96,7 +96,7 @@ divWave();
 ;
 window.addEventListener('load', () => {
     const first = document.querySelectorAll('.seven-item');
-    const wrapper = document.querySelector('.seven-wrap');
+    const wrapper = document.querySelectorAll('.seven-wrap');
     const video_svg = document.querySelector('.m-link-svg svg path');
     const mainVideo = document.querySelector('.main-video');
 
@@ -105,9 +105,11 @@ window.addEventListener('load', () => {
     function delay(value, ms) {
         return new Promise(resolve => resolve(
             setTimeout(() => {
-                wrapper.style.cssText = `
-                    transform: translateY(${value}px);
-                `
+                wrapper.forEach(item => {
+                    item.style.cssText = `
+                        transform: translateY(${value}px);
+                    `
+                })
             }, ms))
         )
     }
@@ -120,7 +122,7 @@ window.addEventListener('load', () => {
         video_svg.style.cssText = `
             stroke-dashoffset: 0px;
         `
-        mainVideo.classList.add('m-video-anim-off')
+        mainVideo.classList.add('m-video-trans-off')
     }, 3000);
 
 });

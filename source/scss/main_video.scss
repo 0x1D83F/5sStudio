@@ -2,6 +2,7 @@
     position: absolute;
     bottom: 10%;
     left: 50%;
+    z-index: 2;
 }
 .int-wrapper{
     position: relative;
@@ -12,7 +13,7 @@
     transform-origin: top center;
     transition: transform .9s;
 }
-.m-video-anim-off{
+.m-video-trans-off{
     transform: perspective(1000px) rotateX(0deg);
 }
 .main-video video{
@@ -22,6 +23,9 @@
 
 .main-button{
     position: absolute;
+    left: 50%;
+    bottom: 8%;
+    z-index: 3;
 }
 .m-btn-container{
     position: relative;
@@ -32,7 +36,7 @@ a.m-btn-link {}
     display: flex;
     transform: translateY(100%);
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .thesis-item:first-child{

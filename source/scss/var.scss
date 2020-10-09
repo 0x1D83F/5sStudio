@@ -18,6 +18,10 @@
 .on-hidden{
   overflow: hidden;
 }
+.op-none{
+  opacity: 0;
+  visibility: hidden;
+}
 
 @mixin perp{
   font-family: 'PERTILI';

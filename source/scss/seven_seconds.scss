@@ -4,8 +4,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 3;
+}
+.seven-double{
     z-index: 1;
-
 }
 .seven-wrap{
     transform: translateY(120px);
@@ -21,8 +23,8 @@
     color: #fff;
     @include perp;
     line-height: 1.1;
+    position: relative;
 }
-
 .seven-item-f,
 .seven-item-s,
 .seven-item-t{
@@ -30,12 +32,18 @@
 }
 .seven-item-f{
     transition-delay: .5s;
+    position: relative;
+    z-index: 1;
 }
 .seven-item-s{
     transition-delay: 1.5s;
+    position: relative;
+    z-index: 0;
 }
 .seven-item-t{
     transition-delay: 2.5s;
+    position: relative;
+    z-index: 1;
 }
 .trans-off{
     transform: scale3d(1,1,1);

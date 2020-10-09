@@ -14,13 +14,14 @@
 @import 'header';
 @import 'seven_seconds';
 @import 'main_video';
+@import 'sec';
 @import 'media';
 html{
     font-family: 'Karla','Helvetica','Arial',sans-serif;
     font-size: 12px;
     font-weight: 500;
 }
-.wrapper{
+.main-container{
     min-height: 100vh;
 }
 

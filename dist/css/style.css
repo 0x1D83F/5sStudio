@@ -185,6 +185,11 @@ h6 {
   overflow: hidden;
 }
 
+.op-none {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .header {
   position: fixed;
   z-index: 4;
@@ -406,6 +411,10 @@ li.menu-column:last-child {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.seven-double {
   z-index: 1;
 }
 
@@ -433,6 +442,7 @@ li.menu-column:last-child {
   color: #fff;
   font-family: 'PERTILI';
   line-height: 1.1;
+  position: relative;
 }
 
 .seven-item-f,
@@ -446,18 +456,24 @@ li.menu-column:last-child {
   -webkit-transition-delay: .5s;
        -o-transition-delay: .5s;
           transition-delay: .5s;
+  position: relative;
+  z-index: 1;
 }
 
 .seven-item-s {
   -webkit-transition-delay: 1.5s;
        -o-transition-delay: 1.5s;
           transition-delay: 1.5s;
+  position: relative;
+  z-index: 0;
 }
 
 .seven-item-t {
   -webkit-transition-delay: 2.5s;
        -o-transition-delay: 2.5s;
           transition-delay: 2.5s;
+  position: relative;
+  z-index: 1;
 }
 
 .trans-off {
@@ -469,6 +485,7 @@ li.menu-column:last-child {
   position: absolute;
   bottom: 10%;
   left: 50%;
+  z-index: 2;
 }
 
 .int-wrapper {
@@ -489,7 +506,7 @@ li.menu-column:last-child {
   transition: transform .9s, -webkit-transform .9s;
 }
 
-.m-video-anim-off {
+.m-video-trans-off {
   -webkit-transform: perspective(1000px) rotateX(0deg);
           transform: perspective(1000px) rotateX(0deg);
 }
@@ -501,6 +518,9 @@ li.menu-column:last-child {
 
 .main-button {
   position: absolute;
+  left: 50%;
+  bottom: 8%;
+  z-index: 3;
 }
 
 .m-btn-container {
@@ -515,7 +535,7 @@ li.menu-column:last-child {
       -ms-transform: translateY(100%);
           transform: translateY(100%);
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .thesis-item:first-child {
@@ -582,19 +602,30 @@ li.menu-column:last-child {
   fill: #00a19a;
 }
 
+.about {
+  height: 100vh;
+  background-color: black;
+}
+
 html {
   font-family: 'Karla','Helvetica','Arial',sans-serif;
   font-size: 12px;
   font-weight: 500;
 }
 
-.wrapper {
+.main-container {
   min-height: 100vh;
 }
 
 .content {
   margin: 0 auto;
   max-width: 95%;
+}
+
+@media (min-width: 1500px) {
+  .seven-pgh {
+    font-size: 8rem;
+  }
 }
 
 @media (max-width: 998px) {
@@ -675,8 +706,9 @@ html {
     font-size: 2.5rem;
   }
 
-  .main-interactive {
-    bottom: 30%;
+  .m-link-svg svg {
+    width: 10rem;
+    height: 10rem;
   }
 }
 
