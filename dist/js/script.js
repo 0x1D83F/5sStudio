@@ -99,6 +99,8 @@ window.addEventListener('load', () => {
     const wrapper = document.querySelectorAll('.seven-wrap');
     const video_svg = document.querySelector('.m-link-svg svg path');
     const mainVideo = document.querySelector('.main-video');
+    const header = document.querySelector('.header');
+
 
     first.forEach(i => i.classList.add('trans-off'))
 
@@ -123,10 +125,29 @@ window.addEventListener('load', () => {
             stroke-dashoffset: 0px;
         `
         mainVideo.classList.add('m-video-trans-off')
+        header.classList.add('h-def')
     }, 3000);
 
 });
 ;
+function openCloseModal(){
+    let parent = document.querySelector('.main-modal');
+    let clickElem = document.querySelectorAll('.st0');
+
+    for(let i = 0; i < clickElem.length; i++){
+        clickElem[i].onclick = function (){
+            parent.classList.toggle('md-open')
+        }
+    }
+}
+openCloseModal();
+
+
+
+;
+
+
+
 
 
 

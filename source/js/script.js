@@ -3,6 +3,10 @@
 @@include('lang.js');
 @@include('bounce.js');
 @@include('onload.js');
+@@include('clicker.js');
+
+
+
 
 
 

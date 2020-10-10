@@ -9,11 +9,15 @@
 .page-main{
   background-color: #00a19a;
 }
+$mainColor: #00a19a;
 .circle-def{
   text-align: center;
 }
 .global-flex{
   display: flex;
+}
+.global-as-center{
+  align-self: center;
 }
 .on-hidden{
   overflow: hidden;
@@ -22,7 +26,9 @@
   opacity: 0;
   visibility: hidden;
 }
-
+@mixin carla {
+  font-family: 'Karla', sans-serif;
+}
 @mixin perp{
   font-family: 'PERTILI';
 }
