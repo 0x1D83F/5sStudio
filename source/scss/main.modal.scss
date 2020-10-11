@@ -37,16 +37,7 @@
     height: 3.75rem;
 }
 .o-button__circle{
-    fill:none;
     stroke:#00a19a;
-    stroke-width:6;
-    stroke-linecap:round;
-    stroke-miterlimit:10;
-    stroke-dasharray: 791px;
-    stroke-dashoffset: 0;
-    transform: rotateX(180deg);
-    transition: stroke-dashoffset 1.2s cubic-bezier(.075,.82,.165,1);
-
 }
 .md-close-btn:hover .o-button__circle{
     stroke-dashoffset:791px;

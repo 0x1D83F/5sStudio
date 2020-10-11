@@ -1,0 +1,31 @@
+.theme-4 *,
+.theme-4 .div-bounce-item,
+.theme-4 .menu-item a,
+.theme-4 .lang-theme,
+.theme-4 .md-title h2{
+    color: #e83c38;
+}
+
+.theme-4,
+.theme-4 .lang-item-fr,
+.theme-4 .lang-text-bg,
+.theme-4 .lang-text-abbr{
+    background-color: #ebeded;
+}
+
+.theme-4 .lang-item-fr:before,
+.theme-4 .menu-column:first-child:after,
+.theme-4 .menu-column:nth-child(2):after,
+.theme-4 .md-header:before,
+.theme-4 .md-line{
+    background-color: #e83c38;
+}
+.theme-4 .st0{
+    stroke: #e83c38;
+}
+.theme-4 .est0{
+    fill:  #e83c38;
+}
+.theme-4 .m-btn-link:hover  .m-link-svg svg path{
+    fill:#ebeded;
+}

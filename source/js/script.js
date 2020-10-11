@@ -1,9 +1,12 @@
 /* @member Object */
 @@include('webpTest.js');
-@@include('lang.js');
-@@include('bounce.js');
-@@include('onload.js');
-@@include('clicker.js');
+@@include('header.lang.js');
+@@include('header.bounce.js');
+@@include('global.onload.js');
+@@include('main.modal.js');
+@@include('global.switcher.js');
+
+
 
 
 

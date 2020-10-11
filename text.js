@@ -1,1 +1,8 @@
-<iframe class="c-iframe" width="560" height="315" src="https://player.vimeo.com/video/390999468?autoplay=1&amp;auto_play=false" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+1)dark #282b29           #a6d1c9
+
+
+2)bg #a6d1c9             #e83c38
+3)pink #282b29          #f4c4c4
+
+4)  bg #ebeded              #e83c38
+

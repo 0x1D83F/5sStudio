@@ -3,11 +3,23 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-.font-white{
-  color: #ebeded !important;
-}
-.page-main{
+
+.page-main,
+.th-back-color{
   background-color: #00a19a;
+}
+.th-color{
+  color: #fff;
+}
+.def-svg{
+  stroke-width:6;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
+  stroke-dasharray: 791px;
+  stroke-dashoffset: 0;
+  fill:none;
+  transform: rotateX(180deg);
+  transition: stroke-dashoffset 1.2s cubic-bezier(.075,.82,.165,1);
 }
 $mainColor: #00a19a;
 .circle-def{
@@ -26,6 +38,7 @@ $mainColor: #00a19a;
   opacity: 0;
   visibility: hidden;
 }
+
 @mixin carla {
   font-family: 'Karla', sans-serif;
 }

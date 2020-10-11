@@ -15,7 +15,8 @@
 @import 'main.seven-title';
 @import 'main.video';
 @import 'main.modal';
-@import 'sec';
+@import 'main.info';
+@import 'global.theme-cor';
 @import 'media';
 html{
     font-family: 'Karla','Helvetica','Arial',sans-serif;
@@ -29,6 +30,17 @@ html{
 .content{
     margin: 0 auto;
     max-width: 95%;
+}
+
+
+
+.body::-webkit-scrollbar{
+    background: #00a19a;
+    width: 8px;
+}
+.body::-webkit-scrollbar-thumb{
+    background: #fff;
+    width: 10px;
 }
 
 

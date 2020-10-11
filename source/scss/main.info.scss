@@ -1,0 +1,78 @@
+.information{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+.learn-more{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    width: 75%;
+}
+.learn-more:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.lm-video video{
+    width: 430px;
+}
+.lm-info{
+    margin-left: 5rem;
+    align-self: center;
+}
+.lm-info-text{
+    margin-bottom: 3.125rem;
+}
+.lm-btn{
+    transform: translateX(-2.12rem);
+}
+.lm-info p{
+    max-width: 391px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.lm-btn-svg{
+    width: 4.25rem;
+    height: 4.25rem;
+}
+.lm-btn-svg svg{
+    stroke: #fff;
+}
+.lm-btn-text{
+    margin-top: 10px;
+    transform: translateX(-25px);
+    position: relative;
+}
+.lm-btn-text:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: .3s;
+}
+.lm-btn-svg svg path{
+    transition: stroke-dashoffset 1.2s cubic-bezier(.075,.82,.165,1);
+}
+.lm-h3{
+    font-size: 1.625rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.lm-btn-link{
+    display: inline-block;
+}
+.lm-btn-link:hover .lm-btn-text:before{
+    width: 100%;
+}
+.lm-btn-link:hover .lm-btn-svg svg path{
+    stroke-dashoffset: 798px;
+}
