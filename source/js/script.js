@@ -5,6 +5,7 @@
 @@include('global.onload.js');
 @@include('main.modal.js');
 @@include('global.switcher.js');
+@@include('global.scroll.js');
 
 
 

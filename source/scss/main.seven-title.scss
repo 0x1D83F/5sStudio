@@ -11,7 +11,7 @@
 }
 .seven-wrap{
     transform: translateY(120px);
-    transition: .3s;
+    transition: transform .3s;
 }
 .seven-item{
     transition: transform .9s cubic-bezier(.075,.82,.165,1);

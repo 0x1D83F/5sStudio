@@ -1,9 +1,11 @@
 .font-default{
-  font-size: 1.05rem;
+  font-size: 1.185rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+.global-half{
+  flex: 0 1 50%;
+}
 .page-main,
 .th-back-color{
   background-color: #00a19a;
