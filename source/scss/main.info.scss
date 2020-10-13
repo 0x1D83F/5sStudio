@@ -3,16 +3,11 @@
     justify-content: flex-end;
     margin-top: 150px;
 }
-.lm-container{
-    display: flex;
-}
 .learn-more{
     position: relative;
     z-index: 5;
     width: 75%;
 }
-
-
 .learn-more:before{
     content: '';
     position: absolute;
@@ -22,7 +17,6 @@
     height: 1px;
     background-color: #fff;
 }
-
 .lm-video video{
     max-width: 100%;
 }
@@ -38,8 +32,9 @@
     transform: translateX(-2.12rem);
 }
 .lm-info p{
-    font-size: 28px;
+    font-size: 2.5rem;
     letter-spacing: 1px;
+    line-height: 2.55rem;
 }
 .lm-btn-svg{
     width: 4.25rem;
@@ -57,7 +52,7 @@
     content: '';
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -2px;
     width: 0;
     height: 1px;
     background-color: #fff;

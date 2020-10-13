@@ -46,6 +46,11 @@
 .theme-1 .m-btn-link:hover  .m-link-svg svg path{
     fill: #a6d1c9;
 }
+.theme-1 .pulse-f,
+.theme-1 .pulse-s{
+    background: #a6d1c9;
+    border: 1px solid #e83c38;
+}
 
 
 
@@ -99,6 +104,11 @@
 .theme-2 .m-btn-link:hover  .m-link-svg svg path{
     fill: #282b29;
 }
+.theme-2 .pulse-f,
+.theme-2 .pulse-s{
+    background: #282b29;
+    border: 1px solid #a6d1c9;
+}
 
 //Theme -3
 
@@ -149,6 +159,12 @@
 }
 .theme-3 .m-btn-link:hover  .m-link-svg svg path{
     fill: #f4c4c4;
+}
+
+.theme-3 .pulse-f,
+.theme-3 .pulse-s{
+    background: #f4c4c4;
+    border: 1px solid #282b29;
 }
 
 
@@ -202,5 +218,11 @@
 .theme-4 .m-btn-link:hover  .m-link-svg svg path{
     fill:#ebeded;
 }
+.theme-4 .pulse-f,
+.theme-4 .pulse-s{
+    background: #ebeded;
+    border: 1px solid #e83c38;
+}
+
 
 

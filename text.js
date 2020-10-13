@@ -1,8 +1,18 @@
-1)dark #282b29           #a6d1c9
+transitionElements.forEach(item => {
+    item.classList.add('video-change-page')
+    setTimeout(() => {
+        document.querySelectorAll('.video-change-page').forEach(i => {
+            i.classList.remove('video-change-page')
+        })
+    }, 3000);
+})
 
-
-2)bg #a6d1c9             #e83c38
-3)pink #282b29          #f4c4c4
-
-4)  bg #ebeded              #e83c38
+allMainHeaders.forEach(item => {
+    item.classList.add('headers-change-page');
+    setTimeout(() => {
+        document.querySelectorAll('.headers-change-page').forEach(i => {
+            i.classList.remove('headers-change-page')
+        })
+    }, 3000);
+})
 

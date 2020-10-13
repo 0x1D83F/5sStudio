@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
     const header = document.querySelector('.header');
 
 
+
     first.forEach(i => i.classList.add('trans-off'))
 
     function delay(value, ms) {
@@ -29,6 +30,7 @@ window.addEventListener('load', () => {
             stroke-dashoffset: 0px;
         `
         mainVideo.classList.add('m-video-trans-off')
+
         header.classList.add('h-def')
     }, 3000);
 

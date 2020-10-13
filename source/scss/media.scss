@@ -20,7 +20,7 @@
     }
 
     .lang-value a{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .lang-item:first-child:after{
         height: 1.5rem;
@@ -49,8 +49,22 @@
     .lang-text-bg{
         background-color: transparent;
     }
-}
+    .learn-more{
+        width: 100%;
+    }
+    .lm-info{
+        padding: 1.5rem 2rem 1.5rem 0;
+    }
+    .lm-info p{
+        font-size: 2rem;
+    }
 
+}
+@media (max-width: 768px){
+    .lm-info p{
+        font-size: 1.5rem;
+    }
+}
 @media (max-width: 700px){
     .seven-item p{
         font-size: 4rem;
@@ -59,6 +73,12 @@
 @media (max-width: 600px){
     .seven-item p{
         font-size: 3rem;
+    }
+    .lm-info p{
+        font-size: 2rem;
+    }
+    .lm-container{
+        flex-direction: column;
     }
 }
 @media (max-width: 486px){

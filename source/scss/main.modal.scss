@@ -6,8 +6,6 @@
     left: 0;
     bottom: 0;
     transition: transform 1.6s cubic-bezier(.075,.82,.165,1);
-    transform: perspective(1000px) rotateX(-90deg);
-    transform-origin: top center;
 }
 .md-open{
     transform: perspective(1000px) rotateX(0deg);
@@ -62,7 +60,7 @@
     width: 0%;
     height: 1px;
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     right: 0;
     background-color: $mainColor;
     transition: .3s;

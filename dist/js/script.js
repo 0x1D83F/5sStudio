@@ -102,6 +102,7 @@ window.addEventListener('load', () => {
     const header = document.querySelector('.header');
 
 
+
     first.forEach(i => i.classList.add('trans-off'))
 
     function delay(value, ms) {
@@ -125,6 +126,7 @@ window.addEventListener('load', () => {
             stroke-dashoffset: 0px;
         `
         mainVideo.classList.add('m-video-trans-off')
+
         header.classList.add('h-def')
     }, 3000);
 
@@ -171,7 +173,69 @@ window.addEventListener('scroll', () => {
     }else{
         document.querySelector('.header-stroke').style.bottom = `100%`
     }
+
+    const lmVideo = document.querySelector('.lm-video');
+    const infoBlock = document.querySelector('.learn-more');
+
+    let infoBlockDistance = infoBlock.getBoundingClientRect().top;
+    let screenHeight = window.innerHeight || document.documentElement.clientHeight;
+    let denominator = 1.1;
+    let calcResDist = screenHeight / denominator;
+
+    if(infoBlockDistance <= calcResDist){
+        lmVideo.classList.add('m-video-trans-off')
+    }
+
 });
+function mouseMove(e){
+    const pulse = document.querySelector('.c-pulse');
+    const child_first = document.querySelector('.pulse-f');
+    const child_sec = document.querySelector('.pulse-s');
+    let posX = e.pageX;
+    let posY = e.pageY;
+    pulse.style.cssText = `
+        left: ${posX}px;
+        top: ${posY}px;
+    `
+
+    child_first.classList.add('is-pulsed');
+    child_sec.classList.add('is-pulsed-2')
+    setTimeout(() => {
+        child_first.classList.remove('is-pulsed');
+        }, 400);
+    setTimeout(() => {
+        child_sec.classList.remove('is-pulsed-2');
+    }, 500);
+
+}
+
+document.addEventListener('click', mouseMove);
+;
+function pageTransitions(event){
+    event.preventDefault();
+    const transitionElements = document.querySelectorAll('.page-retransnform');
+    const allMainHeaders = document.querySelectorAll('.seven-item');
+    let target = event.target;
+
+    if(!target.classList.contains('page-tra')) return
+
+    function reTransform(item,addClass,ms){
+        item.forEach(i => {
+            i.classList.add(addClass)
+        })
+        setTimeout(() => {
+            let removeElems = document.querySelectorAll(`.${addClass}`);
+            removeElems.forEach( item => {
+                item.classList.remove(addClass)
+            })
+        }, ms);
+
+    }
+
+    reTransform(transitionElements, 'video-change-page', 3000 )
+    reTransform(allMainHeaders, 'headers-change-page', 3000 )
+}
+document.addEventListener('click', pageTransitions);
 
 
 

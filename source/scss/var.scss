@@ -13,6 +13,10 @@
 .th-color{
   color: #fff;
 }
+.pulse-adaptive{
+  background: #00a19a;
+  border: 1px solid white;
+}
 .def-svg{
   stroke-width:6;
   stroke-linecap:round;
@@ -40,6 +44,13 @@ $mainColor: #00a19a;
   opacity: 0;
   visibility: hidden;
 }
+.transform-top-center{
+  transform: perspective(1000px) rotateX(-90deg) ;
+  transform-origin: top center;
+}
+.def-trsf-translate{
+  transition: transform  1.6s cubic-bezier(.075,.82,.165,1);
+}
 
 @mixin carla {
   font-family: 'Karla', sans-serif;
@@ -47,3 +58,14 @@ $mainColor: #00a19a;
 @mixin perp{
   font-family: 'PERTILI';
 }
+
+
+.video-change-page{ // Переход между страницами для info block
+  transform: perspective(1000px) rotateX(90deg) !important;
+  transform-origin: bottom center;
+}
+.headers-change-page{
+  transition-delay: 0s !important;
+  transform: scale3d(1,0,0) !important;
+}
+

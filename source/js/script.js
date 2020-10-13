@@ -4,8 +4,10 @@
 @@include('header.bounce.js');
 @@include('global.onload.js');
 @@include('main.modal.js');
-@@include('global.switcher.js');
+@@include('global.color-switcher.js');
 @@include('global.scroll.js');
+@@include('global.mouse-effect.js');
+@@include('global.page-transition.js');
 
 
 
