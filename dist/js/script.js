@@ -201,7 +201,6 @@ function mouseMove(e){
         left: ${posX}px;
         top: ${posY}px;
     `
-    console.log('x: ' + posX, 'y: ' + posY)
 
     child_first.classList.add('is-pulsed');
     child_sec.classList.add('is-pulsed-2')

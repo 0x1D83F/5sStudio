@@ -22,17 +22,18 @@
 .theme-1 .lang-text-bg,
 .theme-1 .lang-text-abbr,
 .theme-1 .page-main,
-.theme-1 .header-stroke,
 .theme-1 .th-back-color{
     background-color: #a6d1c9;
 }
 
 .theme-1 .lang-item-fr:before,
+.theme-1 .information:after,
 .theme-1 .learn-more:before,
 .theme-1 .lm-btn-text:before,
 .theme-1 .menu-column:first-child:after,
 .theme-1 .menu-column:nth-child(2):after,
 .theme-1 .md-header:before,
+.theme-1 .header-stroke,
 .theme-1 .md-line{
     background-color: #e83c38;
 }
@@ -87,6 +88,7 @@
 .theme-2 .lang-item-fr:before,
 .theme-2 .learn-more:before,
 .theme-2 .lm-btn-text:before,
+.theme-2 .information:after,
 .theme-2 .menu-column:first-child:after,
 .theme-2 .menu-column:nth-child(2):after,
 .theme-2 .md-header:before,
@@ -143,6 +145,7 @@
 .theme-3 .lang-item-fr:before,
 .theme-3 .learn-more:before,
 .theme-3 .lm-btn-text:before,
+.theme-3 .information:after,
 .theme-3 .menu-column:first-child:after,
 .theme-3 .menu-column:nth-child(2):after,
 .theme-3 .md-header:before,
@@ -201,6 +204,7 @@
 .theme-4 .lang-item-fr:before,
 .theme-4 .lm-btn-text:before,
 .theme-4 .learn-more:before,
+.theme-4 .information:after,
 .theme-4 .menu-column:first-child:after,
 .theme-4 .menu-column:nth-child(2):after,
 .theme-4 .md-header:before,
