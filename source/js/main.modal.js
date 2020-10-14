@@ -6,9 +6,10 @@ function openCloseModal(){
     for(let i = 0; i < clickElem.length; i++){
         clickElem[i].onclick = function (){
             parent.classList.toggle('md-open')
+            body.classList.toggle('_lock')
         }
     }
-    body.classList.add('_lock')
+
 
 }
 openCloseModal();
