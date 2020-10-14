@@ -2,6 +2,16 @@
     .seven-pgh{
         font-size: 8rem;
     }
+    .main-video{
+        width:30vw;
+        height: 25vw;
+    }
+    .m-link-svg{
+        transform: translate(-50%, 0);
+    }
+    .m-link-thesis{
+        transform: translateY(-250%);
+    }
 }
 @media (max-width: 998px){
     .header-container{

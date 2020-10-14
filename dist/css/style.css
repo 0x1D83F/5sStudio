@@ -1248,6 +1248,23 @@ html {
   .seven-pgh {
     font-size: 8rem;
   }
+
+  .main-video {
+    width: 30vw;
+    height: 25vw;
+  }
+
+  .m-link-svg {
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+
+  .m-link-thesis {
+    -webkit-transform: translateY(-250%);
+        -ms-transform: translateY(-250%);
+            transform: translateY(-250%);
+  }
 }
 
 @media (max-width: 998px) {
