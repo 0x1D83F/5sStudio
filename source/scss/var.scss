@@ -13,13 +13,13 @@
 .th-back-color{
   background-color: #00a19a;
 }
+.est0{
+  fill: #fff;
+}
 .th-color{
   color: #fff;
 }
-.pulse-adaptive{
-  background: #00a19a;
-  border: 1px solid white;
-}
+
 .def-svg{
   stroke-width:6;
   stroke-linecap:round;
@@ -29,6 +29,10 @@
   fill:none;
   transform: rotateX(180deg);
   transition: stroke-dashoffset 1.2s cubic-bezier(.075,.82,.165,1);
+}
+.svg-display{
+  stroke: #fff;
+  stroke-dasharray: 0;
 }
 $mainColor: #00a19a;
 .circle-def{

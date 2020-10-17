@@ -1,4 +1,4 @@
-window.addEventListener('scroll', () => {
+document.addEventListener('scroll', (e) => {
     if(pageYOffset > 400) {
         document.querySelector('.header-stroke').style.bottom = `0`
     }else{
@@ -16,5 +16,17 @@ window.addEventListener('scroll', () => {
     if(infoBlockDistance <= calcResDist){
         lmVideo.classList.add('m-video-trans-off')
     }
+
+    const projectHeader = document.querySelector('.prj-header ');
+
+    let distprojectHeader = projectHeader.getBoundingClientRect().bottom;
+    let itemHeight = projectHeader.clientHeight / 2;
+    let calc = (screenHeight / 2) + itemHeight;
+    console.log(pageYOffset)
+
+    if(distprojectHeader <= calc){
+        projectHeader.classList.add('_fix-scroll')
+    }
+
 
 })
