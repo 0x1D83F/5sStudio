@@ -38,6 +38,7 @@
     background-color: #e83c38;
 }
 .theme-1 .st0,
+.theme-1 .stroke-svg,
 .theme-1 .lm-btn-svg svg{
     stroke: #e83c38;
 }
@@ -52,9 +53,9 @@
     background: #a6d1c9;
     border: 1px solid #e83c38;
 }
-
-
-
+.theme-1 .gl-border-b{
+    border-bottom: 1px solid #e83c38;
+}
 
 
 // Theme 2
@@ -97,6 +98,7 @@
     background-color: #a6d1c9;
 }
 .theme-2 .st0,
+.theme-2 .stroke-svg,
 .theme-2 .lm-btn-svg svg{
     stroke: #a6d1c9;
 }
@@ -110,6 +112,9 @@
 .theme-2 .pulse-s{
     background: #282b29;
     border: 1px solid #a6d1c9;
+}
+.theme-2 .gl-border-b{
+    border-bottom: 1px solid #a6d1c9;
 }
 
 //Theme -3
@@ -154,6 +159,7 @@
     background-color: #282b29;
 }
 .theme-3 .st0,
+.theme-3 .stroke-svg,
 .theme-3 .lm-btn-svg svg{
     stroke: #282b29;
 }
@@ -168,6 +174,9 @@
 .theme-3 .pulse-s{
     background: #f4c4c4;
     border: 1px solid #282b29;
+}
+.theme-3 .gl-border-b{
+    border-bottom: 1px solid #282b29;
 }
 
 
@@ -213,6 +222,7 @@
     background-color: #e83c38;
 }
 .theme-4 .st0,
+.theme-4 .stroke-svg,
 .theme-4 .lm-btn-svg svg{
     stroke: #e83c38;
 }
@@ -226,6 +236,9 @@
 .theme-4 .pulse-s{
     background: #ebeded;
     border: 1px solid #e83c38;
+}
+.theme-4 .gl-border-b{
+    border-bottom: 1px solid #e83c38;
 }
 
 

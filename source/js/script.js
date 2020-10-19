@@ -8,6 +8,7 @@
 @@include('global.scroll.js');
 @@include('global.mouse-effect.js');
 @@include('global.page-transition.js');
+@@include('projects.running-string.js');
 
 
 

@@ -3,6 +3,9 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+div._d-none{
+  display: none;
+}
 ._lock{
   overflow: hidden;
 }
@@ -50,6 +53,9 @@ $mainColor: #00a19a;
 .op-none{
   opacity: 0;
   visibility: hidden;
+}
+.gl-border-b{
+  border-bottom: 1px solid #fff;
 }
 .transform-top-center{
   transform: perspective(1000px) rotateX(-90deg) ;

@@ -17,16 +17,6 @@ document.addEventListener('scroll', (e) => {
         lmVideo.classList.add('m-video-trans-off')
     }
 
-    const projectHeader = document.querySelector('.prj-header ');
-
-    let distprojectHeader = projectHeader.getBoundingClientRect().bottom;
-    let itemHeight = projectHeader.clientHeight / 2;
-    let calc = (screenHeight / 2) + itemHeight;
-    console.log(pageYOffset)
-
-    if(distprojectHeader <= calc){
-        projectHeader.classList.add('_fix-scroll')
-    }
 
 
 })
