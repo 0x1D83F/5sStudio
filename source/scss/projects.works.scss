@@ -1,5 +1,4 @@
-.works{
-}
+
 .works-container{
     margin-top: 200px;
     position: relative;
@@ -36,6 +35,7 @@
 }
 .g-project-container{
     position: relative;
+    max-width: 100%;
 }
 .g-project-absolute{
     position: absolute;
@@ -68,11 +68,12 @@
  }
 
 .g-project-video{
+    max-width: 100%;
 
 }
 .g-project-video video{
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
 }
 
 .hover-effect__circle-block{
