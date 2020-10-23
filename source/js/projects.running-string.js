@@ -25,7 +25,7 @@ function startVideo() {
 }
 startVideo();
 
-function createVideoModals(){
+function createVideoModalsOnClick(){
     const modalGlobal = document.querySelector('.works-modal-video');
     const worksModal = document.querySelector('.works-modal');
     const workLink = document.querySelector('.works-link');
@@ -52,7 +52,7 @@ function createVideoModals(){
         body.classList.remove('_lock')
     });
 }
-createVideoModals()
+createVideoModalsOnClick()
 
 
 
