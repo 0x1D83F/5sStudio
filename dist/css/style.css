@@ -142,17 +142,17 @@ h6 {
 }
 
 @font-face {
-  font-family: "PERTILI";
+  font-family: "times";
   font-display: swap;
-  src: url("../fonts/PERTILI.woff") format("woff"), url("../fonts/PERTILI.woff2") format("woff2");
+  src: url("../fonts/times.woff") format("woff"), url("../fonts/times.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "times";
+  font-family: "PERTILI";
   font-display: swap;
-  src: url("../fonts/times.woff") format("woff"), url("../fonts/times.woff2") format("woff2");
+  src: url("../fonts/PERTILI.woff") format("woff"), url("../fonts/PERTILI.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -180,6 +180,10 @@ div._d-none {
 .page-main,
 .th-back-color {
   background-color: #00a19a;
+}
+
+.th-bgc-rgba {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .est0 {
@@ -237,6 +241,10 @@ div._d-none {
   border-bottom: 1px solid #fff;
 }
 
+.def-block {
+  display: block;
+}
+
 .transform-top-center {
   -webkit-transform: perspective(1000px) rotateX(-90deg);
           transform: perspective(1000px) rotateX(-90deg);
@@ -251,6 +259,11 @@ div._d-none {
   -o-transition: transform 1.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: transform 1.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: transform 1.6s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 1.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.m-video-trans-off {
+  -webkit-transform: perspective(1000px) rotateX(0deg);
+          transform: perspective(1000px) rotateX(0deg);
 }
 
 .video-change-page {
@@ -659,11 +672,6 @@ li.menu-column:last-child {
   -o-transition: transform .9s;
   transition: transform .9s;
   transition: transform .9s, -webkit-transform .9s;
-}
-
-.m-video-trans-off {
-  -webkit-transform: perspective(1000px) rotateX(0deg);
-          transform: perspective(1000px) rotateX(0deg);
 }
 
 .main-video video {
@@ -1344,7 +1352,8 @@ li.menu-column:last-child {
 .theme-1 .md-title h2,
 .theme-1 .seven-pgh,
 .theme-1 .md-header h2,
-.theme-1 .th-color {
+.theme-1 .th-color,
+.theme-1 .work-close-header h2 {
   color: #e83c38;
 }
 
@@ -1356,6 +1365,10 @@ li.menu-column:last-child {
 .theme-1::-webkit-scrollbar-thumb {
   background: #e83c38 !important;
   width: 10px;
+}
+
+.theme-1 .th-bgc-rgba {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .theme-1,
@@ -1393,6 +1406,10 @@ li.menu-column:last-child {
   fill: #a6d1c9;
 }
 
+.theme-1 .work-close-svg path {
+  stroke: #e83c38;
+}
+
 .theme-1 .pulse-f,
 .theme-1 .pulse-s {
   background: #a6d1c9;
@@ -1413,6 +1430,10 @@ li.menu-column:last-child {
   color: #a6d1c9;
 }
 
+.theme-2 .work-close-header h2 {
+  color: #282b29;
+}
+
 .theme-2,
 .theme-2 .lang-item-fr,
 .theme-2 .lang-text-bg,
@@ -1430,6 +1451,10 @@ li.menu-column:last-child {
 .theme-2::-webkit-scrollbar-thumb {
   background: #a6d1c9 !important;
   width: 10px;
+}
+
+.theme-2 .th-bgc-rgba {
+  background-color: rgba(166, 209, 201, 0.9);
 }
 
 .theme-2 .lang-item-fr:before,
@@ -1458,6 +1483,10 @@ li.menu-column:last-child {
   fill: #282b29;
 }
 
+.theme-2 .work-close-svg path {
+  stroke: #282b29;
+}
+
 .theme-2 .pulse-f,
 .theme-2 .pulse-s {
   background: #282b29;
@@ -1478,6 +1507,10 @@ li.menu-column:last-child {
   color: #282b29;
 }
 
+.theme-3 .work-close-header h2 {
+  color: #f4c4c4;
+}
+
 .theme-3,
 .theme-3 .lang-item-fr,
 .theme-3 .lang-text-bg,
@@ -1495,6 +1528,10 @@ li.menu-column:last-child {
 .theme-3::-webkit-scrollbar-thumb {
   background: #282b29 !important;
   width: 10px;
+}
+
+.theme-3 .th-bgc-rgba {
+  background-color: rgba(40, 43, 41, 0.9);
 }
 
 .theme-3 .lang-item-fr:before,
@@ -1521,6 +1558,10 @@ li.menu-column:last-child {
 
 .theme-3 .m-btn-link:hover .m-link-svg svg path {
   fill: #f4c4c4;
+}
+
+.theme-3 .work-close-svg path {
+  stroke: #f4c4c4;
 }
 
 .theme-3 .pulse-f,
@@ -1552,6 +1593,10 @@ li.menu-column:last-child {
   background-color: #ebeded;
 }
 
+.theme-4 .work-close-header h2 {
+  color: #f4c4c4;
+}
+
 .theme-4::-webkit-scrollbar {
   background: #ebeded !important;
   width: 8px;
@@ -1560,6 +1605,10 @@ li.menu-column:last-child {
 .theme-4::-webkit-scrollbar-thumb {
   background: #e83c38 !important;
   width: 10px;
+}
+
+.theme-4 .th-bgc-rgba {
+  background-color: rgba(232, 60, 56, 0.9);
 }
 
 .theme-4 .lang-item-fr:before,
@@ -1586,6 +1635,10 @@ li.menu-column:last-child {
 
 .theme-4 .m-btn-link:hover .m-link-svg svg path {
   fill: #ebeded;
+}
+
+.theme-4 .work-close-svg path {
+  stroke: #f4c4c4;
 }
 
 .theme-4 .pulse-f,

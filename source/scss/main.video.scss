@@ -11,9 +11,7 @@
     width: calc(350 * 100vw / 1366);
     transition: transform .9s;
 }
-.m-video-trans-off{
-    transform: perspective(1000px) rotateX(0deg);
-}
+
 .main-video video{
     width: 100%;
     height: 100%;

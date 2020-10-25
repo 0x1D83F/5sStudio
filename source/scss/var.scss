@@ -16,13 +16,15 @@ div._d-none{
 .th-back-color{
   background-color: #00a19a;
 }
+.th-bgc-rgba{
+  background-color: rgba(255,255,255, .9);
+}
 .est0{
   fill: #fff;
 }
 .th-color{
   color: #fff;
 }
-
 .def-svg{
   stroke-width:6;
   stroke-linecap:round;
@@ -57,12 +59,18 @@ $mainColor: #00a19a;
 .gl-border-b{
   border-bottom: 1px solid #fff;
 }
+.def-block{
+  display: block;
+}
 .transform-top-center{
   transform: perspective(1000px) rotateX(-90deg) ;
   transform-origin: top center;
 }
 .def-trsf-translate{
   transition: transform  1.6s cubic-bezier(.075,.82,.165,1);
+}
+.m-video-trans-off{
+  transform: perspective(1000px) rotateX(0deg);
 }
 
 @mixin carla {

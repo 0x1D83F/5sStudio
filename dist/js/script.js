@@ -16,31 +16,152 @@ function testWebP(callback) {
             document.querySelector('body').classList.add('no-webp');
         }
 });;
-const link = document.querySelector('.lang-value-items');
-const franceBlock = document.querySelector('.lang-item-fr');
-const englishHiddenElem = document.querySelector('.lang-text-full-eng');
-const englishShort = document.querySelector('.lang-text-abbr');
-const headerLangElem = document.querySelector('.header-lang');
-const franceEndElem = document.querySelector('.lang-text-full-fr ');
-const userWindow = window.innerWidth || document.documentElement.offsetWidth;
+window.addEventListener('load', () => {
+    function sevenBlockAnimation(){
+        const first = document.querySelectorAll('.seven-item');
+        const wrapper = document.querySelectorAll('.seven-wrap');
+        const video_svg = document.querySelector('.m-link-svg svg path');
+        const mainVideo = document.querySelector('.main-video');
+        const header = document.querySelector('.header');
 
-if(userWindow <= 1000 && franceEndElem.classList.contains('lang-active')) headerLangElem.classList.add('lang-translate-active')
-else headerLangElem.classList.remove('lang-translate-active')
+        first.forEach(i => i.classList.add('trans-off'))
+
+        function delay(value, ms) {
+            return new Promise(resolve => resolve(
+                setTimeout(() => {
+                    wrapper.forEach(item => {
+                        item.style.cssText = `
+                        transform: translateY(${value}px);
+                    `
+                    })
+                }, ms))
+            )
+        }
+
+        delay(80, 1000)
+        delay(40, 1900)
+        delay(0, 2900)
+
+        setTimeout(() => {
+            video_svg.style.cssText = `
+            stroke-dashoffset: 0px;
+            `
+            mainVideo.classList.add('m-video-trans-off')
+
+            header.classList.add('h-def')
+        }, 3000);
+    }
+    sevenBlockAnimation();
+
+
+});
+;
+document.addEventListener('scroll', (e) => {
+    function infoBlockRotateScroll(){
+        if(pageYOffset > 400) {
+            document.querySelector('.header-stroke').style.bottom = `0`
+        }else{
+            document.querySelector('.header-stroke').style.bottom = `100%`
+        }
+
+        const lmVideo = document.querySelector('.lm-video');
+        const infoBlock = document.querySelector('.learn-more');
+
+        let infoBlockDistance = infoBlock.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight || document.documentElement.clientHeight;
+        let screenWidth = window.innerWidth || document.documentElement.clientWidth;
+        let denominator = 1.1;
+        let calcResDist = screenHeight / denominator;
+
+        if(infoBlockDistance <= calcResDist){
+            lmVideo.classList.add('m-video-trans-off')
+        }
+    }
+    infoBlockRotateScroll();
 
 
 
-link.addEventListener('mouseover',() => {
+    function parallaxVideo(){
+        const block1 = document.querySelector('.block__mod-1');
+        const block4 = document.querySelector('.block__mod-4');
+        const screenHeight = window.innerHeight || document.documentElement.clientHeight;
+        const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+
+        let top = block1.getBoundingClientRect().top;
+        let top2 = block4.getBoundingClientRect().top;
+
+        function parallaxDown(element){
+            const elem = document.querySelector(element).getBoundingClientRect().top;
+            const speed = document.querySelector(element).getAttribute('data-speed');
+            const screenHeight = document.documentElement.clientHeight;
+
+            let d = (pageYOffset + elem) - screenHeight;
+            let scroll = window.pageYOffset;
+            let res = (scroll - d) / speed;
+
+            document.querySelector(element).style.cssText = `transform: translate3d(0px, ${res}px, 0px);`
+        }
+
+        function parallaxTop(element){
+            const speed = document.querySelector(element).getAttribute('data-speed');
+            const a = window.pageYOffset,
+                b = document.querySelector(element).getBoundingClientRect().top,
+                c = a + b,
+                d = c - 100,
+                e = ((d - a) / 2) / speed;
+
+            document.querySelector(element).style.cssText = `transform: translate3d(0px, ${e}px, 0px);`
+        }
+        function noTransform(element,element2){
+            document.querySelector(element).classList.add('m-video-trans-off')
+            document.querySelector(element2).classList.add('m-video-trans-off')
+        }
+
+        if(top <= screenHeight / 1.2){
+            noTransform('.g-project-elem-1', '.g-project-elem-2')
+        }
+        if(top <= screenHeight && top >= 0 && screenWidth >= 1000){
+            parallaxDown('.block__mod-1');
+            parallaxTop('.block__mod-2');
+        }
+        if(top2 <= screenHeight && top2 >= 0 && screenWidth >= 1000){
+            parallaxTop('.block__mod-3');
+            parallaxDown('.block__mod-4');
+        }
+    }
+    parallaxVideo();
+
+})
+
+;
+function headerLangSwitcher(val){
+    const link = document.querySelector('.lang-value-items');
+    const franceBlock = document.querySelector('.lang-item-fr');
+    const englishHiddenElem = document.querySelector('.lang-text-full-eng');
+    const englishShort = document.querySelector('.lang-text-abbr');
+    const headerLangElem = document.querySelector('.header-lang');
+    const franceEndElem = document.querySelector('.lang-text-full-fr ');
+    const userWindow = window.innerWidth || document.documentElement.offsetWidth;
+
+    if(userWindow <= 1000 && franceEndElem.classList.contains('lang-active')) headerLangElem.classList.add('lang-translate-active')
+    else headerLangElem.classList.remove('lang-translate-active')
+
+
+
+    link.addEventListener('mouseover',() => {
         franceBlock.classList.add('lang-item-fr-null')
         englishHiddenElem.classList.add('eng-visible')
         englishShort.classList.add('eng-no-margin')
-})
+    })
 
-link.addEventListener('mouseout', () => {
-    franceBlock.classList.remove('lang-item-fr-null')
-    englishHiddenElem.classList.remove('eng-visible')
-    englishShort.classList.remove('eng-no-margin')
-})
+    link.addEventListener('mouseout', () => {
+        franceBlock.classList.remove('lang-item-fr-null')
+        englishHiddenElem.classList.remove('eng-visible')
+        englishShort.classList.remove('eng-no-margin')
+    })
 
+}
+headerLangSwitcher();
 
 ;
 const divWave = () => {
@@ -94,44 +215,6 @@ divWave();
 
 
 ;
-window.addEventListener('load', () => {
-    const first = document.querySelectorAll('.seven-item');
-    const wrapper = document.querySelectorAll('.seven-wrap');
-    const video_svg = document.querySelector('.m-link-svg svg path');
-    const mainVideo = document.querySelector('.main-video');
-    const header = document.querySelector('.header');
-
-
-
-    first.forEach(i => i.classList.add('trans-off'))
-
-    function delay(value, ms) {
-        return new Promise(resolve => resolve(
-            setTimeout(() => {
-                wrapper.forEach(item => {
-                    item.style.cssText = `
-                        transform: translateY(${value}px);
-                    `
-                })
-            }, ms))
-        )
-    }
-
-    delay(80, 1000)
-    delay(40, 1900)
-    delay(0, 2900)
-
-    setTimeout(() => {
-        video_svg.style.cssText = `
-            stroke-dashoffset: 0px;
-        `
-        mainVideo.classList.add('m-video-trans-off')
-
-        header.classList.add('h-def')
-    }, 3000);
-
-});
-;
 function openCloseModal(){
     const parent = document.querySelector('.main-modal');
     const clickElem = document.querySelectorAll('.st0');
@@ -171,75 +254,7 @@ globalColorSwitcher();
 
 
 ;
-document.addEventListener('scroll', (e) => {
-    if(pageYOffset > 400) {
-        document.querySelector('.header-stroke').style.bottom = `0`
-    }else{
-        document.querySelector('.header-stroke').style.bottom = `100%`
-    }
 
-    const lmVideo = document.querySelector('.lm-video');
-    const infoBlock = document.querySelector('.learn-more');
-
-    let infoBlockDistance = infoBlock.getBoundingClientRect().top;
-    let screenHeight = window.innerHeight || document.documentElement.clientHeight;
-    let screenWidth = window.innerWidth || document.documentElement.clientWidth;
-    let denominator = 1.1;
-    let calcResDist = screenHeight / denominator;
-
-    if(infoBlockDistance <= calcResDist){
-        lmVideo.classList.add('m-video-trans-off')
-    }
-
-
-    // projects blocks parallax
-    const block1 = document.querySelector('.block__mod-1');
-    const block2 = document.querySelector('.block__mod-2');
-    const block3 = document.querySelector('.block__mod-3');
-    const block4 = document.querySelector('.block__mod-4');
-
-    let top = block1.getBoundingClientRect().top;
-    let top2 = block4.getBoundingClientRect().top;
-
-    function parallaxDown(element){
-        let elem = document.querySelector(element).getBoundingClientRect().top;
-        let speed = document.querySelector(element).getAttribute('data-speed');
-        let screenHeight = document.documentElement.clientHeight;
-        let d = (pageYOffset + elem) - screenHeight;
-        let scroll = window.pageYOffset;
-        
-        let res = (scroll - d) / speed; // 5
-
-        document.querySelector(element).style.cssText = `transform: translate3d(0px, ${res}px, 0px);`
-    }
-
-    function parallaxTop(element){
-        const speed = document.querySelector(element).getAttribute('data-speed');
-        const a = window.pageYOffset,
-              b = document.querySelector(element).getBoundingClientRect().top,
-              c = a + b,
-              d = c - 100,
-              e = ((d - a) / 2) / speed;
-
-        document.querySelector(element).style.cssText = `transform: translate3d(0px, ${e}px, 0px);`
-    }
-
-    if(top <= screenHeight && top >= 0){
-        parallaxDown('.block__mod-1');
-        parallaxTop('.block__mod-2');
-    }
-
-    if(top2 <= screenHeight && top2 >= 0){
-        parallaxTop('.block__mod-3');
-        parallaxDown('.block__mod-4');
-    }
-
-
-
-
-})
-
-;
 function mouseMove(e){
     const pulse = document.querySelector('.c-pulse');
     const child_first = document.querySelector('.pulse-f');
@@ -295,73 +310,63 @@ function pageTransitions(event){
     reTransform(infoOpacity, 'op-none', 10000 )
 }
 document.addEventListener('click', pageTransitions);
-function createRunningString() {
-    const boxes = document.querySelectorAll('.g-project__words-moving');
+function runningString(){
+    function createRunningString() {
+        const boxes = document.querySelectorAll('.g-project__words-moving');
 
-    boxes.forEach(elem => {
-        const html = `<span class="th-color font-default">${elem.querySelector('.words-header').innerText}</span>`.repeat(10);
-        elem.querySelectorAll('.running-string-wrapp').forEach(block => block.innerHTML = html);
-    });
-
-
-}
-
-createRunningString();
-
-function startVideo() {
-    document.querySelectorAll('.g-project-link')
-        .forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                item.children[0].children[0].children[0].play();
-            })
-            item.addEventListener('mouseleave', () => {
-                item.children[0].children[0].children[0].pause();
-            })
-
-        })
-}
-startVideo();
-
-function createVideoModalsOnClick(){
-    const modalGlobal = document.querySelector('.works-modal-video');
-    const worksModal = document.querySelector('.works-modal');
-    const workLink = document.querySelector('.works-link');
-
-    let elem = document.querySelectorAll('.g-project__hover-effect ')
-    elem.forEach(item => {
-        item.addEventListener('click', () => {
-            let link = item.previousElementSibling.children[0].getAttribute('src');
-            let createVideo = document.createElement('video');
-            createVideo.setAttribute('loop', '');
-            createVideo.setAttribute('muted', '');
-            createVideo.setAttribute('src', `${link}`);
-            modalGlobal.append(createVideo)
-
-            worksModal.classList.add('md-open')
-            body.classList.add('_lock')
-
+        boxes.forEach(elem => {
+            const html = `<span class="th-color font-default">${elem.querySelector('.words-header').innerText}</span>`.repeat(10);
+            elem.querySelectorAll('.running-string-wrapp').forEach(block => block.innerHTML = html);
         });
-    })
 
-    workLink.addEventListener('click', () => {
-        modalGlobal.children[0].remove();
-        worksModal.classList.remove('md-open')
-        body.classList.remove('_lock')
-    });
+
+    }
+    createRunningString();
+
+    function startVideo() {
+        document.querySelectorAll('.g-project-link')
+            .forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.children[0].children[0].children[0].play();
+                })
+                item.addEventListener('mouseleave', () => {
+                    item.children[0].children[0].children[0].pause();
+                })
+
+            })
+    }
+    startVideo();
+
+    function createVideoModalsOnClick(){
+        const modalGlobal = document.querySelector('.works-modal-video');
+        const worksModal = document.querySelector('.works-modal');
+        const workLink = document.querySelector('.works-link');
+
+        let elem = document.querySelectorAll('.g-project__hover-effect ')
+        elem.forEach(item => {
+            item.addEventListener('click', () => {
+                let link = item.previousElementSibling.children[0].getAttribute('src');
+                let createVideo = document.createElement('video');
+                createVideo.setAttribute('loop', '');
+                createVideo.setAttribute('muted', '');
+                createVideo.setAttribute('src', `${link}`);
+                modalGlobal.append(createVideo)
+
+                worksModal.classList.add('md-open')
+                body.classList.add('_lock')
+
+            });
+        })
+
+        workLink.addEventListener('click', () => {
+            modalGlobal.children[0].remove();
+            worksModal.classList.remove('md-open')
+            body.classList.remove('_lock')
+        });
+    }
+    createVideoModalsOnClick();
 }
-createVideoModalsOnClick()
-
-
-
-
-
-
-
-
-
-
-
-;
+runningString();;
 
 
 
