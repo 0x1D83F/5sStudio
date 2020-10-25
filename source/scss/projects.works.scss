@@ -1,4 +1,6 @@
+.works{
 
+}
 .works-container{
     margin-top: 200px;
     position: relative;
@@ -186,17 +188,28 @@
     background-color: rgba(255,255,255, .9);
     transition: transform 1.6s cubic-bezier(.075,.82,.165,1);
 }
-.works-modal-wrap{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+
 .works-modal-btn{
     position: absolute;
     right: 5px;
     top: 0px;
+}
+.works-modal-wrap{
+    height: 100%;
+}
+.works-modal-video{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.works-separator{
+    position: relative;
+    z-index: 5;
+    border-top-width: 1px;
+    border-top-style: solid;
+    height: 150px;
+    margin-top: 150px;
 }
 @keyframes move {
     0%{
