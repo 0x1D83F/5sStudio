@@ -74,6 +74,12 @@
     .g-project-block {
         flex: 0 1 auto;
     }
+    .g-project-block a {
+        transform: rotate(0) ;
+    }
+    .block__mod-3{
+        transform: translateY(0);
+    }
     .block__mod-1,
     .block__mod-3,
     .block__mod-4{
@@ -112,6 +118,38 @@
     }
     .clients__wrapper{
         width: 100%;
+    }
+    .clients__contacts{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .span-disable{
+        display: block;
+    }
+    .span-enable{
+        display: none;
+    }
+    .contacts__element:first-of-type{
+        display: none;
+    }
+    .contacts__element-info:first-child{
+        padding-bottom: 15px;
+    }
+    .element-info_flex{
+        display: flex;
+    }
+    .element-info_flex a {
+        margin-right: 10px;
+    }
+    .bg-string{
+        padding: 0px 0px 0px 0px;
+    }
+    .footer__menu{
+        display: none;
+    }
+    .footer-copyright{
+        display: block;
     }
 
 }

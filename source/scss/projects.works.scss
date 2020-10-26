@@ -149,7 +149,7 @@
     margin-top: 230px;
 
 }
-.works-button-wrapper{
+.gl-transform-button-wrapper{
     display: inline-block;
 }
 .works-rotate-text{
@@ -174,8 +174,8 @@
 .works-translate{
     transform: translate(50%);
 }
-.works-button-wrapper a:hover .works-rotate,
-.works-button-wrapper a:hover .works-rotate-text{
+.gl-transform-button-wrapper a:hover .works-rotate,
+.gl-transform-button-wrapper a:hover .works-rotate-text{
     transform: rotate(0deg);
 }
 .works-modal{

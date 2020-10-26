@@ -5,6 +5,7 @@
 .theme-1 .seven-pgh,
 .theme-1 .md-header h2,
 .theme-1 .th-color,
+.theme-1 .th-color span,
 .theme-1 .work-close-header h2{
     color: #e83c38;
 }
@@ -95,7 +96,8 @@
 .theme-2 .lang-theme,
 .theme-2 .md-title h2,
 .theme-2 .seven-pgh,
-.theme-2 .th-color{
+.theme-2 .th-color,
+.theme-2 .th-color span{
     color: #a6d1c9;
 }
 .theme-2 .work-close-header h2{
@@ -162,9 +164,6 @@
 .theme-2 .gl-border-b{
     border-bottom: 1px solid #a6d1c9;
 }
-.theme-2 .gl-border-color{
-    border: 1px solid #a6d1c9;
-}
 .theme-2 .gl-no-right-border{
     border-right: none;
 }
@@ -187,7 +186,8 @@
 .theme-3 .lang-theme,
 .theme-3 .md-title h2,
 .theme-3 .seven-pgh,
-.theme-3 .th-color{
+.theme-3 .th-color,
+.theme-3 .th-color span{
     color: #282b29;
 }
 .theme-3 .work-close-header h2{
@@ -257,9 +257,6 @@
 .theme-3 .gl-border-b{
     border-bottom: 1px solid #282b29;
 }
-.theme-3 .gl-border-color{
-    border: 1px solid #282b29;
-}
 .theme-3 .gl-no-right-border{
     border-right: none;
 }
@@ -283,7 +280,8 @@
 .theme-4 .lang-theme,
 .theme-4 .md-title h2,
 .theme-4 .seven-pgh,
-.theme-4 .th-color{
+.theme-4 .th-color,
+.theme-4 .th-color span{
     color: #e83c38;
 }
 
@@ -349,9 +347,6 @@
 }
 .theme-4 .gl-border-b{
     border-bottom: 1px solid #e83c38;
-}
-.theme-4 .gl-border-color{
-    border: 1px solid #e83c38;
 }
 .theme-4 .gl-no-right-border{
     border-right: none;

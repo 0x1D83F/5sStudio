@@ -3,11 +3,14 @@
     top: -148px;
     z-index: 6;
 }
-.clients{
-    display: flex;
-    justify-content: flex-end;
+.footer__clients{
 }
 .clients__wrapper{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.clients__table{
     width: 75%;
 }
 .clients__header,

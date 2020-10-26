@@ -347,17 +347,19 @@ function runningString(){
         const workLink = document.querySelector('.works-link');
 
         let elem = document.querySelectorAll('.g-project__hover-effect ')
-        elem.forEach(item => {
+        elem.forEach((item,index) => {
             item.addEventListener('click', () => {
                 let link = item.previousElementSibling.children[0].getAttribute('src');
                 let createVideo = document.createElement('video');
+                createVideo.classList.add('video-modal-temp')
                 createVideo.setAttribute('loop', '');
-                createVideo.setAttribute('muted', '');
                 createVideo.setAttribute('src', `${link}`);
                 modalGlobal.append(createVideo)
 
                 worksModal.classList.add('md-open')
                 body.classList.add('_lock')
+
+                document.querySelector('.video-modal-temp').play();
 
             });
         })
@@ -370,7 +372,9 @@ function runningString(){
     }
     createVideoModalsOnClick();
 }
-runningString();;
+runningString();
+
+;
 
 
 
