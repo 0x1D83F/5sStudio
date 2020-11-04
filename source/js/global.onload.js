@@ -1,10 +1,12 @@
 window.addEventListener('load', () => {
     function preloader(){
         const preload = document.querySelector('.preloader');
+        body.classList.add('_lock')
         setTimeout(() => {
             preload.style.cssText = `
                 display: none;
             `
+            body.classList.remove('_lock')
         }, 1500);
     }
     preloader();
@@ -13,7 +15,6 @@ window.addEventListener('load', () => {
         const userWindow = window.clientWidth || document.documentElement.clientWidth;
         const elem = document.querySelector('.main-modal ');
         if(userWindow < 1000){
-            document.querySelector('.menu-item a').textContent = 'resTORAN'
             elem.classList.remove('transform-top-center');
             elem.classList.add('_mobile-main_modal')
         }
