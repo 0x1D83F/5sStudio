@@ -1,4 +1,5 @@
 /* @member Object */
+
 function testWebP(callback) {
 
     var webP = new Image();
@@ -17,12 +18,34 @@ function testWebP(callback) {
         }
 });;
 window.addEventListener('load', () => {
+    function preloader(){
+        const preload = document.querySelector('.preloader');
+        setTimeout(() => {
+            preload.style.cssText = `
+                display: none;
+            `
+        }, 1500);
+    }
+    preloader();
+
+    function checkWindowWidth(val){
+        const userWindow = window.clientWidth || document.documentElement.clientWidth;
+        const elem = document.querySelector('.main-modal ');
+        if(userWindow < 1000){
+            document.querySelector('.menu-item a').textContent = 'resTORAN'
+            elem.classList.remove('transform-top-center');
+            elem.classList.add('_mobile-main_modal')
+        }
+    }
+    checkWindowWidth();
+
     function sevenBlockAnimation(){
         const first = document.querySelectorAll('.seven-item');
         const wrapper = document.querySelectorAll('.seven-wrap');
         const video_svg = document.querySelector('.m-link-svg svg path');
         const mainVideo = document.querySelector('.main-video');
         const header = document.querySelector('.header');
+        const logo = document.querySelector('.header-logo-svg');
 
         first.forEach(i => i.classList.add('trans-off'))
 
@@ -38,9 +61,13 @@ window.addEventListener('load', () => {
             )
         }
 
-        delay(80, 1000)
-        delay(40, 1900)
-        delay(0, 2900)
+        delay(80, 2900)
+        delay(40, 4000)
+        delay(0, 5000)
+
+        // delay(80, 1000)
+        // delay(40, 1900)
+        // delay(0, 2900)
 
         setTimeout(() => {
             video_svg.style.cssText = `
@@ -49,9 +76,11 @@ window.addEventListener('load', () => {
             mainVideo.classList.add('m-video-trans-off')
 
             header.classList.add('h-def')
-        }, 3000);
+            logo.style.cssText = `bottom: 15px;`
+        }, 5100); // 3000
     }
     sevenBlockAnimation();
+
 
 
 });
@@ -85,6 +114,7 @@ document.addEventListener('scroll', (e) => {
         const block1 = document.querySelector('.block__mod-1');
         const block4 = document.querySelector('.block__mod-4');
         const block5 = document.querySelector('.block__mod-5');
+
         const screenHeight = window.innerHeight || document.documentElement.clientHeight;
         const screenWidth = window.innerWidth || document.documentElement.clientWidth;
 
@@ -219,13 +249,14 @@ divWave();
 
 
 ;
-function openCloseModal(){
+function openCloseModal() {
     const parent = document.querySelector('.main-modal');
     const clickElem = document.querySelectorAll('.st0');
     const body = document.querySelector('.body');
 
-    for(let i = 0; i < clickElem.length; i++){
-        clickElem[i].onclick = function (){
+
+    for (let i = 0; i < clickElem.length; i++) {
+        clickElem[i].onclick = function () {
             parent.classList.toggle('md-open')
             body.classList.toggle('_lock')
         }
@@ -233,11 +264,13 @@ function openCloseModal(){
 
 
 }
+
 openCloseModal();
 
 
 
 ;
+
 function globalColorSwitcher(){
     let body = document.querySelector('.body');
     let counter = 0;
@@ -249,8 +282,8 @@ function globalColorSwitcher(){
 
         body.classList.remove(`theme-${counter}`)
         counter++;
-        if(counter > 4) counter = 0
-        body.classList.add(`theme-${counter}`)
+        if(counter > 4) counter = 0;
+        body.classList.add(`theme-${counter}`);
     });
 }
 globalColorSwitcher();
@@ -258,7 +291,6 @@ globalColorSwitcher();
 
 
 ;
-
 function mouseMove(e){
     const pulse = document.querySelector('.c-pulse');
     const child_first = document.querySelector('.pulse-f');
@@ -291,6 +323,10 @@ function pageTransitions(event){
     const allMainHeaders = document.querySelectorAll('.seven-item');
     const playbtnOpacity = document.querySelectorAll('.m-btn-link')
     const infoOpacity = document.querySelectorAll('.lm-info');
+    const projectsVideo = document.querySelectorAll('.project_page-tr');
+    const projectsBlock = document.querySelectorAll('.g-project-block');
+    const projectHeader = document.querySelectorAll('.prj-header h2')
+    const footer = document.querySelectorAll('.footer');
     let target = event.target;
 
     if(!target.classList.contains('page-tra')) return
@@ -310,10 +346,21 @@ function pageTransitions(event){
 
     reTransform(transitionElements, 'video-change-page', 10000 )
     reTransform(allMainHeaders, 'headers-change-page', 10000 )
+    reTransform(projectsVideo, 'video-change-page', 10000 )
+
     reTransform(playbtnOpacity, 'op-none', 10000 )
     reTransform(infoOpacity, 'op-none', 10000 )
+    reTransform(projectsBlock, 'op-none', 10000 )
+    reTransform(projectHeader, 'op-none', 10000 )
+    reTransform(footer, 'op-none', 10000 )
+
 }
-document.addEventListener('click', pageTransitions);
+document.addEventListener('click', pageTransitions)
+
+document.addEventListener('click', (event) => {
+    let target = event.target;
+    console.log(target.className)
+});
 function runningString(){
     function createRunningString() {
         const boxes = document.querySelectorAll('.g-project__words-moving');
@@ -331,10 +378,10 @@ function runningString(){
         document.querySelectorAll('.g-project-link')
             .forEach(item => {
                 item.addEventListener('mouseenter', () => {
-                    item.children[0].children[0].children[0].play();
+                    item.children[0].children[0].children[1].play();
                 })
                 item.addEventListener('mouseleave', () => {
-                    item.children[0].children[0].children[0].pause();
+                    item.children[0].children[0].children[1].pause();
                 })
 
             })
@@ -349,7 +396,7 @@ function runningString(){
         let elem = document.querySelectorAll('.g-project__hover-effect ')
         elem.forEach((item,index) => {
             item.addEventListener('click', () => {
-                let link = item.previousElementSibling.children[0].getAttribute('src');
+                let link = item.previousElementSibling.children[1].children[0].getAttribute('src');
                 let createVideo = document.createElement('video');
                 createVideo.classList.add('video-modal-temp')
                 createVideo.setAttribute('loop', '');
@@ -375,7 +422,6 @@ function runningString(){
 runningString();
 
 ;
-
 
 
 

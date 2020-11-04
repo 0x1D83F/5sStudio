@@ -27,6 +27,7 @@ document.addEventListener('scroll', (e) => {
         const block1 = document.querySelector('.block__mod-1');
         const block4 = document.querySelector('.block__mod-4');
         const block5 = document.querySelector('.block__mod-5');
+
         const screenHeight = window.innerHeight || document.documentElement.clientHeight;
         const screenWidth = window.innerWidth || document.documentElement.clientWidth;
 

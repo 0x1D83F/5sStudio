@@ -73,6 +73,10 @@ div.gl-border-color{
   transform: perspective(1000px) rotateX(-90deg) ;
   transform-origin: top center;
 }
+._mobile-main_modal{
+  transform: perspective(0) rotateX(0) translateY(-100%);
+  transform-origin: 50% 50% 0;
+}
 .def-trsf-translate{
   transition: transform  1.6s cubic-bezier(.075,.82,.165,1);
 }
@@ -96,4 +100,6 @@ div.gl-border-color{
   transition-delay: 0s !important;
   transform: scale3d(1,0,0) !important;
 }
+
+
 

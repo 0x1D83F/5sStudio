@@ -1,10 +1,32 @@
 window.addEventListener('load', () => {
+    function preloader(){
+        const preload = document.querySelector('.preloader');
+        setTimeout(() => {
+            preload.style.cssText = `
+                display: none;
+            `
+        }, 1500);
+    }
+    preloader();
+
+    function checkWindowWidth(val){
+        const userWindow = window.clientWidth || document.documentElement.clientWidth;
+        const elem = document.querySelector('.main-modal ');
+        if(userWindow < 1000){
+            document.querySelector('.menu-item a').textContent = 'resTORAN'
+            elem.classList.remove('transform-top-center');
+            elem.classList.add('_mobile-main_modal')
+        }
+    }
+    checkWindowWidth();
+
     function sevenBlockAnimation(){
         const first = document.querySelectorAll('.seven-item');
         const wrapper = document.querySelectorAll('.seven-wrap');
         const video_svg = document.querySelector('.m-link-svg svg path');
         const mainVideo = document.querySelector('.main-video');
         const header = document.querySelector('.header');
+        const logo = document.querySelector('.header-logo-svg');
 
         first.forEach(i => i.classList.add('trans-off'))
 
@@ -20,9 +42,13 @@ window.addEventListener('load', () => {
             )
         }
 
-        delay(80, 1000)
-        delay(40, 1900)
-        delay(0, 2900)
+        delay(80, 2900)
+        delay(40, 4000)
+        delay(0, 5000)
+
+        // delay(80, 1000)
+        // delay(40, 1900)
+        // delay(0, 2900)
 
         setTimeout(() => {
             video_svg.style.cssText = `
@@ -31,9 +57,11 @@ window.addEventListener('load', () => {
             mainVideo.classList.add('m-video-trans-off')
 
             header.classList.add('h-def')
-        }, 3000);
+            logo.style.cssText = `bottom: 15px;`
+        }, 5100); // 3000
     }
     sevenBlockAnimation();
+
 
 
 });

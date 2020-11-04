@@ -8,7 +8,7 @@
     transition: transform 1.6s cubic-bezier(.075,.82,.165,1);
 }
 .md-open{
-    transform: perspective(1000px) rotateX(0deg);
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
 }
 .md-area{
     position: relative;

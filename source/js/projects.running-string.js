@@ -15,10 +15,10 @@ function runningString(){
         document.querySelectorAll('.g-project-link')
             .forEach(item => {
                 item.addEventListener('mouseenter', () => {
-                    item.children[0].children[0].children[0].play();
+                    item.children[0].children[0].children[1].play();
                 })
                 item.addEventListener('mouseleave', () => {
-                    item.children[0].children[0].children[0].pause();
+                    item.children[0].children[0].children[1].pause();
                 })
 
             })
@@ -33,7 +33,7 @@ function runningString(){
         let elem = document.querySelectorAll('.g-project__hover-effect ')
         elem.forEach((item,index) => {
             item.addEventListener('click', () => {
-                let link = item.previousElementSibling.children[0].getAttribute('src');
+                let link = item.previousElementSibling.children[1].children[0].getAttribute('src');
                 let createVideo = document.createElement('video');
                 createVideo.classList.add('video-modal-temp')
                 createVideo.setAttribute('loop', '');

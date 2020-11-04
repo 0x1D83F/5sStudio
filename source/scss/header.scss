@@ -141,7 +141,9 @@ li.menu-column:last-child{
     height: 90px;
     position: fixed;
     left: 30px;
-    bottom: 15px;
+    //bottom: 15px;
+    bottom: -100%;
+    transition: bottom .3s;
 }
 .lang-translate-active{
     bottom: 100px !important; // Выбранный язык france

@@ -9,8 +9,8 @@ function globalColorSwitcher(){
 
         body.classList.remove(`theme-${counter}`)
         counter++;
-        if(counter > 4) counter = 0
-        body.classList.add(`theme-${counter}`)
+        if(counter > 4) counter = 0;
+        body.classList.add(`theme-${counter}`);
     });
 }
 globalColorSwitcher();
